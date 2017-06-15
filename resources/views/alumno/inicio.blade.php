@@ -65,6 +65,8 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<h1>ALUMNO</h1>
+
   @include('flash::message')
 	<script src="{{asset('jquery-3.1.1/jquery-3.1.1.min.js')}}"></script>
     <script src="{{asset('bootstrap-3.3.7/js/bootstrap.min.js')}}"></script>

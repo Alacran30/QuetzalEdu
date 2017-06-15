@@ -1,6 +1,11 @@
 
+	/********** navbar-styles **********/
+	body{
 
-/********** navbar-styles **********/
+		margin-top: 60px;
+		background-image: url('../img/figuras_fondo.png');
+    
+	}
 
 	.navbar{
 		border-radius: 0px;
@@ -11,6 +16,7 @@
 
 	.navbar-default .navbar-nav>li>a{
 	    color: #fff;
+	    font-size: 12px;
 	}
 
 	.navbar-default .navbar-nav>li>a:hover{
@@ -18,80 +24,176 @@
 	    color: #fff;
 	}
 
+	.navbar-default .navbar-nav>li>a.ingresar{
+	    color: #ff9800;
+	    font-size: 14px;
+	    text-decoration: underline;
+	    font-weight: bolder;
+	}
+
+	.navbar-default .navbar-nav>li>a.ingresar:hover{
+	    color: #ff9800;
+	    font-size: 14px;
+	    background-color: transparent;
+	    text-decoration: underline;
+	}
+
 	.navbar-brand{
-	   padding: 0px;
+	   	padding: 0px;
 	}
 
   	.navbar-brand>img{
-    height: 100%;
-    width: auto;
-    margin-left: 10px;
-    padding: 5px 14px;
+	    height: 100%;
+	    width: auto;
+	    margin-left: 10px;
+	    padding: 5px 14px;
   	}
 
-/********** navbar-styles **********/
+  	.navbar-default .navbar-toggle .icon-bar{
+  		background-color: #fff;
+  	}
+
+  	.navbar-default .navbar-toggle {
+    border-color: #ddd;
+	}
+  	
+
+  	.registro{
+  		margin-right: 20px;
+	  	margin-top: 15px;
+	  	padding-left: 10px;
+	  	padding-right: 10px;
+	  	margin-left: 3px;
+	  	font-size: 12px;
+  	}
+
+  	.inicia{
+  		text-decoration: underline;
+  		font-weight: bold;
+  	}
+	/********** navbar-styles **********/
 
 
 
-/******** carousel-slides ********/
+	/******** carousel-slides ********/
+	.item{
+		/*background-color: #efeee5;*/
+		background-image: url('../img/figuras_fondo.png');
+	}
 
 	.carousel{
-	z-index: 1;
-	position: absolute;
-	clear: both;
+		border-bottom: solid 2px #dfdfdf;
+	}
+	/******** carousel-slides ********/
+
+	
+
+	/******** home ********/
+	.repeat{
+		background-image: url('../img/Cintillo.png');
+		background-color: #668933;
+		height: 40px; 
+		border-bottom: solid 2px #dfdfdf;
 	}
 
-   .caption{
-   	background-color: rgba(0,0,0,0.1);
-    margin-left: 45px;
-    margin-top: 70px;
-    border-radius: 10px;
-    color: #fff;
-    height: auto;
-    padding-top: 25px;
-    padding-bottom: 45px;
-    z-index: 3;
-    position: relative;
+	label{
+		font-size: 14px;
+		font-weight: bold;
 	}
-
-    .text{
-    padding: 10px;
-    font-size: 24px;
-	}
-
-	.register{
-	font-size: 18px;
-	}
-
-	.log{
-	position: relative; 
-	z-index: 2;
-	float: right;
-	margin-top: 15px;
-	margin-right: 15px;
-	padding: 5px;
-	}
-
-
-/******** carousel-slides ********/
 
 	.form-control{
-	background-color: #f3f3f6;
+		background-color: #f3f3f6;
+	}
+
+	textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus {
+    -webkit-box-shadow: inset 0 -2px 0 #7fa57b;
+    box-shadow: inset 0 -2px 0 #7fa57b;
+	}	
+
+	.close{
+		color:#fff !important;
 	}
 
 	.quitarfloat{
-	float: none;
+		float: none;
+		margin-top: 55px;
 	}
 
-	.text {
-	font-family: 'Roboto', sans-serif;
-	color: #fff;
+	.form-control-feedback{
+		margin-top: 10px;
 	}
 
-	.pacifico{
-	font-family: 'Lobster Two', cursive;
+	.error{
+		color: red; 
+		margin:0px; 
+		padding: 0px;"
+	}
+
+	.contra{
+		text-align: right;
+		margin-bottom: 10px;
+	}
+
+	
+
+	.exp{
+
+		color: #fff;
+		max-width: 50%;
+		height: 40px;
+		background-color: #668933;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		margin-top: 1px;
+	}
+
+	footer{
+		border-top: solid 5px #dfdfdf;
+		background-color: #668933;
+		height: auto;
+	}
+	/******** home ********/
+
+
+	/******** responsive ********/
+	@media screen and (max-width: 900px){
+
+	.navbar-default .navbar-nav>li>a{
+	    font-size: 10px;
+	    padding-left: 5px;
+	    padding-right: 5px;
+	}
+
+	.navbar-default .navbar-nav>li>a.ingresar{
+	    color: #ff9800;
+	    font-size: 10px;
+	    text-decoration: underline;
+	    font-weight: bolder;
+	}
+
+	.navbar-default .navbar-nav>li>a.ingresar:hover{
+	    color: #ff9800;
+	    font-size: 10px;
+	    background-color: transparent;
+	    text-decoration: underline;
+	}
+
+	.registro{
+	  	margin-top: 18px;
+	  	padding-left: 10px;
+	  	padding-right: 10px;
+	  	margin-left: 3px;
+	  	font-size: 10px;
   	}
+		
+	}
+	/******** responsive ********/
 
+
+	
+
+
+	
 
 
 
