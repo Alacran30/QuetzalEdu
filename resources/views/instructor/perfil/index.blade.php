@@ -79,33 +79,33 @@ Perfil
   {!! Form::text('calle', $user->persona->direccion->calle, ['class' => 'form-control', 'placeholder' => 'Calle']) !!}
 
      <label>Número Interior *</label>
-  <input type="text" name="interior" class="form-control">
+  {!! Form::text('numeroint', $user->persona->direccion->numeroint, ['class' => 'form-control', 'placeholder' => 'Número interior']) !!}
   
      <label>Número Exterior *</label>
-  <input type="text" name="exterior" class="form-control">
+  {!! Form::text('numeroext', $user->persona->direccion->numeroext, ['class' => 'form-control', 'placeholder' => 'Número exterior']) !!}
 
       <label>Colonia *</label>
-  <input type="text" name="colonia" class="form-control">
+  {!! Form::text('colonia', $user->persona->direccion->colonia, ['class' => 'form-control', 'placeholder' => 'Colonia']) !!}
   
      <label>Municipio *</label>
-  <input type="text" name="municipio" class="form-control">
+  {!! Form::text('municipio', $user->persona->direccion->municipio, ['class' => 'form-control', 'placeholder' => 'Municipio']) !!}
 
       <label>Estado *</label>
-  <input type="text" name="estado" class="form-control">
+  {!! Form::text('estado', $user->persona->direccion->estado, ['class' => 'form-control', 'placeholder' => 'Estado']) !!}
 
       <label>Código Postal *</label>
-  <input type="text" name="postal" class="form-control">
+  {!! Form::text('cp', $user->persona->direccion->cp, ['class' => 'form-control', 'placeholder' => 'Código postal']) !!}
 
   </div>
 
 
    <div class="tab-pane" id="profesional-tab">
       <label>Nivel de Estudios *</label>
-  <input type="text" name="estudios" class="form-control">
+  {!! Form::text('nivel', $user->persona->profesional->nivel, ['class' => 'form-control', 'placeholder' => 'Nivel de Estudios']) !!}
       <label>Especialidad *</label>
-  <input type="text" name="especialidad" class="form-control">
-      <label>Resumen Curricular</label>
-      <textarea class="form-control"></textarea>
+  {!! Form::text('especialidad', $user->persona->profesional->especialidad, ['class' => 'form-control', 'placeholder' => 'Especialidad']) !!}
+      <label>Experiencia Docente</label>
+  {!! Form::textarea('experiencia', $user->persona->profesional->experiencia, ['class' => 'form-control', 'placeholder' => 'Experiencia']) !!}
    </div>
 
   </div>

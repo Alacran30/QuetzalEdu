@@ -45,9 +45,9 @@ class PasswordController extends Controller{
         $messages = [
             'mypassword.required' => '* El campo es requerido',
             'password.required' => '* El campo es requerido',
-            'password.confirmed' => '* Los passwords no coinciden',
+            'password.confirmed' => '* Las contraseñas no coinciden',
             'password.min' => '* El mínimo permitido son 6 caracteres',
-            'password.max' => '* El máximo permitido son 18 caracteres',
+            'password.max' => '* El máximo permitido son 10 caracteres',
         ];
         
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -61,9 +61,6 @@ class PasswordController extends Controller{
                      ->update(['password' => bcrypt($request->password)]);
                      flash()->overlay('<h6>'.'Su contraseña fue modificada correctamente &nbsp;'.'<span class="fa fa-check">'.'<span>'.'</h6>', 'Cambio de Contraseña');
                          return redirect('contraseña');
-                    /* Session::flash('message-info', 'Su contraseña fue modificada correctamente');
-                return redirect('contraseña');*/
-
             }
             else
             {

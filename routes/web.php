@@ -91,3 +91,8 @@ Route::resource('contraseña','PasswordController');
 Route::post('updatecontraseña','PasswordController@updatepassword');
 
 
+Route::get('quienes_somos', function(){
+    return view('index.quienes_somos');
+});
+
+

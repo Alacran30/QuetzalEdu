@@ -30,7 +30,7 @@ Inicio
     <a class="btn btn-warning btn-block" style="background-color:#c1d188;"> Asignar Actividad </a>
   </div>
   <hr>
-  <textarea class="form-control" placeholder="Escriba su mensaje aquí..."></textarea>
+  <textarea class="form-control" placeholder="Escriba su mensaje aquí..." autofocus></textarea>
   <hr>
   <i class="fa fa-book fa-2x" style="padding: 4px;"></i>&nbsp;
   <i class="fa fa-clipboard fa-2x" style="padding: 4px;"></i>&nbsp;

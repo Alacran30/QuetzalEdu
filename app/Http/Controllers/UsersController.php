@@ -42,6 +42,12 @@ class UsersController extends Controller
                 $user->password = bcrypt($request->password);
                 $user->save();
 
+                $persona = new Persona($request->all());
+
+                $persona->user_id = $user->id;
+
+                $persona->save(); 
+
                 if(Auth::attempt(['email'=>$request['email'], 'password'=>$request['password']])){
                     flash()->overlay('Mensaje de Bienvenida al Sistema');
                     return Redirect::to('/inicio');

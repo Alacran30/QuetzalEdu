@@ -8,13 +8,17 @@ use App\User;
 
 use App\Persona;
 
+use App\Direccion;
+
+use App\Profesional;
+
 use Validator;
 
 use Auth;
 
 class PerfilController extends Controller
 {
-    //
+    
      public function index(Request $request){ 
 
      	$users = User::orderBy('id', 'ASC')->paginate(5);
@@ -27,25 +31,13 @@ class PerfilController extends Controller
 
      	$user->persona->direccion;
 
+        $user->persona->profesional;
+
      	return view('instructor.perfil.index')->with('user', $user);
      
    	}
 
    	public function store(Request $request){
-
-   			/* dd('hola'); */
-
-        /* $persona = new Persona($request->all());
-
-        $id = \Auth::user()->id;
-
-        $persona->user_id = $id;
-
-        $persona->save();
-
-        flash('¡El Perfil ha sido editado exitosamente!', 'success');
-
-        return view('instructor.inicio'); */
 
 
 
@@ -57,12 +49,6 @@ class PerfilController extends Controller
 
         $id_persona = $user->persona->id;
 
-         /*$persona = new Persona($request->all());
-
-         $persona->nombre;*/
-
-
-
         $persona = Persona::find($id_persona);
 
         $persona->nombre = $request->nombre;
@@ -73,10 +59,29 @@ class PerfilController extends Controller
         $persona->nacimiento = $request->nacimiento;
         $persona->genero = $request->genero;
 
-        $user->persona->direccion->calle = $request->nombre;
+        $id_direccion = $persona->direccion->id;
 
+        $direccion = Direccion::find($id_direccion);
 
+        $direccion->calle = $request->calle;
+        $direccion->numeroint = $request->numeroint;
+        $direccion->numeroext = $request->numeroext;
+        $direccion->colonia = $request->colonia;
+        $direccion->municipio = $request->municipio;
+        $direccion->estado = $request->estado;
+        $direccion->cp = $request->cp;
 
+        $id_profesional = $persona->profesional->id;
+
+        $profesional = Profesional::find($id_profesional);
+
+        $profesional->nivel = $request->nivel;
+        $profesional->especialidad = $request->especialidad;
+        $profesional->experiencia = $request->experiencia;
+
+        $profesional->save();
+
+        $direccion->save();
 
         $persona->save();
 
@@ -111,34 +116,5 @@ class PerfilController extends Controller
 
         return redirect()->route('perfil.index')->with('user', $user);
 
-
-        /* $rules = ['image' => 'required|image|max:1024*1024*1',];
-        $messages = [
-            'image.required' => 'La imagen es requerida',
-            'image.image' => 'Formato no permitido',
-            'image.max' => 'El máximo permitido es 1MB',
-
-        ];
-
-        /*$validator = Validator::make($request->all(), $rules, $messages);*/
-
-        /*if($validator->fails()){
-            
-            return redirect('perfil')->withErrors($validator);
-        }*/
-
-        /*else{*/
-
-            /*$name = str_random(30).'-'.$request->file('image')->getClientOriginalName();
-            $path = public_path().'/img/perfil';
-            $request->file('image')->move($path, $name);
-            $persona = new Persona;
-
-            $persona->nombre = "hola";
-            $persona->image = $name;
-            $persona->save();*/
-
-
-        /*}*/
     }
 }

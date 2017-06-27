@@ -44,9 +44,12 @@ class LogController extends Controller{
 
 
     public function logout(){
-
+        
+        Cache::flush();
         Auth::logout();
         return Redirect::to('/');
+
+
 
     }
     
