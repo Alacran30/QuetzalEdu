@@ -11,7 +11,7 @@
 	    <link rel="stylesheet" href="{{asset('css/main.css')}}"/>
 	    <link rel="stylesheet" href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}"/>
 	</head>
-	<body ng-controller="FirstController">
+	<body>
 		@include('instructor.template.partials.nav')
 		@yield('section')
 		@include('flash::message')

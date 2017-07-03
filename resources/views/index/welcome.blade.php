@@ -41,8 +41,9 @@
           </div>
         </div>
       <!-- /.carousel-slide -->
-        <div class="repeat">
+        <div class="repeat" id="cursos">
         </div>
+        <br>
         <div class="container">
           <div class="col-lg-12">
             <h3>
@@ -53,63 +54,64 @@
             </h3>
           </div>
         <!--modulos-->
-          <div class="row" style="text-align: center;" id="cursos">
-                <div class="col-md-3">
-                    <div class="panel panel-default" style="background-color: #7fa57b;border-radius: 10px;">
-                        <div class="panel-body">
-                        <center>
-                            <img class="img-responsive" src="{{asset('img/competencias_docentes.png')}}">
-                        </center>
-                        </div>
-                        <div class="panel-heading" style="background-color: #efeee5;">
-                            <h5> Competencias Docentes</h5>
-                            <a href="" class="btn btn-default"> Ver Curso </a>
-                        </div>
+          <div class="row" style="text-align: center;">
+            <div class="col-md-3">
+                <div class="panel panel-default" style="background-color: #7fa57b;border-radius: 10px;">
+                    <div class="panel-body">
+                    <center>
+                        <img class="img-responsive" src="{{asset('img/competencias_docentes.png')}}">
+                    </center>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default" style="background-color: #c1d188;border-radius: 10px;">
-                        <div class="panel-body">
-                        <center>
-                            <img class="img-responsive" src="{{asset('img/estrategias_docentes.png')}}">
-                        </center>
-                        </div>
-                        <div class="panel-heading">
-                            <h5> Estrategias Docentes</h5>
-                            <a href="" class="btn btn-default"> Ver Curso </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default" style="background-color: #7fa57b;border-radius: 10px;">
-                        <div class="panel-body">
-                        <center>
-                            <img class="img-responsive" src="{{asset('img/desarrollo_planeacion.png')}}">
-                        </center>
-                        </div>
-                        <div class="panel-heading">
-                            <h5> Desarrollo y Planeación</h5>
-                            <a href="" class="btn btn-default"> Ver Curso </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default" style="background-color: #c1d188;border-radius: 10px;">
-                        <div class="panel-body">
-                        <center>
-                            <img class="img-responsive" src="{{asset('img/capacitacion_examenes.png')}}">
-                        </center>
-                        </div>
-                        <div class="panel-heading">
-                            <h5> Exámenes de Oposición</h5>
-                            <a href="" class="btn btn-default"> Ver Curso </a>
-                        </div>
+                    <div class="panel-heading" style="background-color: #efeee5;">
+                        <h5> Competencias Docentes</h5>
+                        <a href="" class="btn btn-default"> Ver Curso </a>
                     </div>
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="panel panel-default" style="background-color: #c1d188;border-radius: 10px;">
+                    <div class="panel-body">
+                    <center>
+                        <img class="img-responsive" src="{{asset('img/estrategias_docentes.png')}}">
+                    </center>
+                    </div>
+                    <div class="panel-heading">
+                        <h5> Estrategias Docentes</h5>
+                        <a href="" class="btn btn-default"> Ver Curso </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default" style="background-color: #7fa57b;border-radius: 10px;">
+                    <div class="panel-body">
+                    <center>
+                        <img class="img-responsive" src="{{asset('img/desarrollo_planeacion.png')}}">
+                    </center>
+                    </div>
+                    <div class="panel-heading">
+                        <h5> Desarrollo y Planeación</h5>
+                        <a href="" class="btn btn-default"> Ver Curso </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default" style="background-color: #c1d188;border-radius: 10px;">
+                    <div class="panel-body">
+                    <center>
+                        <img class="img-responsive" src="{{asset('img/capacitacion_examenes.png')}}">
+                    </center>
+                    </div>
+                    <div class="panel-heading">
+                        <h5> Exámenes de Oposición</h5>
+                        <a href="" class="btn btn-default"> Ver Curso </a>
+                    </div>
+                </div>
+            </div>
+          </div>
           <!--/.modulos-->
         </div>
-        <div class="exp" id="experiencias">
+        <div id="experiencias"></div>
+        <div class="exp">
           <center>
             <h4 style="color: #fff;">EXPERIENCIAS</h4>
           </center>
@@ -187,7 +189,7 @@
                 <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                 </ul>
-            </div>
+              </div>
           </div>
         </footer>
 @endsection

@@ -23,7 +23,7 @@
             @endif
             {!!Form::open(['route'=>'log', 'method'=>'POST'])!!}
               <div class="form-group has-feedback">
-                <input type="email" name="email" class="form-control" placeholder="Correo electrónico / Usuario" required autofocus />
+                <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required autofocus />
                 <span class="fa fa-user fa-lg form-control-feedback"></span> 
                 @if($errors->has('email'))
                   <span class="error" >* {{ $errors->first('email') }}</span>
@@ -47,7 +47,6 @@
           <div class="contra">
             <p><span class="pull-left"> ¿No tienes <a href="{{ url('/registro') }}"> Cuenta?</a></span></p> ¿Olvidaste tu <a href="">Contraseña?</a>
           </div>
-        </div>
         </div>
 @endsection
 

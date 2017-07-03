@@ -1,10 +1,8 @@
 
 	/********** navbar-styles **********/
 	body{
-
 		margin-top: 60px;
 		background-image: url('../img/figuras_fondo.png');
-    
 	}
 
 	.navbar{
@@ -54,7 +52,7 @@
   	}
 
   	.navbar-default .navbar-toggle {
-    border-color: #ddd;
+    	border-color: #ddd;
 	}
   	
 
@@ -77,7 +75,6 @@
 
 	/******** carousel-slides ********/
 	.item{
-		/*background-color: #efeee5;*/
 		background-image: url('../img/figuras_fondo.png');
 	}
 
@@ -106,8 +103,8 @@
 	}
 
 	textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus {
-    -webkit-box-shadow: inset 0 -2px 0 #7fa57b;
-    box-shadow: inset 0 -2px 0 #7fa57b;
+	    -webkit-box-shadow: inset 0 -2px 0 #7fa57b;
+	    box-shadow: inset 0 -2px 0 #7fa57b;
 	}	
 
 	.close{
@@ -134,8 +131,6 @@
 		margin-bottom: 10px;
 	}
 
-	
-
 	.exp{
 
 		color: #fff;
@@ -154,6 +149,75 @@
 	}
 	/******** home ********/
 
+	/* footer social icons */
+	ul.social-network {
+		list-style: none;
+		display: inline;
+		margin-left:0 !important;
+		padding: 0;
+	}
+	ul.social-network li {
+		display: inline;
+		margin: 0 5px;
+	}
+
+	/* footer social icons */
+	.social-network a.icoFacebook:hover {
+		background-color:#3B5998;
+	}
+	.social-network a.icoInstagram:hover {
+		background-color:#cd486b;
+	}
+	.social-network a.icoTwitter:hover {
+		background-color:#33ccff;
+	}
+	.social-network a.icoYouTube:hover {
+		background-color:#e81b1b;
+	}
+	.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i, .social-network a.icoInstagram:hover i,
+	.social-network a.icoYouTube:hover i {
+		color:#fff;
+	}
+	a.socialIcon:hover, .socialHoverClass {
+		color:#44BCDD;
+	}
+
+	.social-circle li a {
+		display:inline-block;
+		position:relative;
+		margin:0 auto 0 auto;
+		-moz-border-radius:50%;
+		-webkit-border-radius:50%;
+		border-radius:50%;
+		text-align:center;
+		width: 50px;
+		height: 50px;
+		font-size:20px;
+	}
+	.social-circle li i {
+		margin:0;
+		line-height:50px;
+		text-align: center;
+	}
+
+	.social-circle li a:hover i, .triggeredHover {
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-ms--transform: rotate(360deg);
+		transform: rotate(360deg);
+		-webkit-transition: all 0.2s;
+		-moz-transition: all 0.2s;
+		-o-transition: all 0.2s;
+		-ms-transition: all 0.2s;
+		transition: all 0.2s;
+	}
+	.social-circle i {
+		color: #fff;
+		-webkit-transition: all 0.8s;
+		-moz-transition: all 0.8s;
+		-o-transition: all 0.8s;
+		-ms-transition: all 0.8s
+	}
 
 	/******** responsive ********/
 	@media screen and (max-width: 900px){
@@ -188,78 +252,6 @@
 		
 	}
 	/******** responsive ********/
-
-
-/* footer social icons */
-ul.social-network {
-	list-style: none;
-	display: inline;
-	margin-left:0 !important;
-	padding: 0;
-}
-ul.social-network li {
-	display: inline;
-	margin: 0 5px;
-}
-
-
-	/* footer social icons */
-.social-network a.icoFacebook:hover {
-	background-color:#3B5998;
-}
-.social-network a.icoInstagram:hover {
-	background-color:#cd486b;
-}
-.social-network a.icoTwitter:hover {
-	background-color:#33ccff;
-}
-.social-network a.icoYouTube:hover {
-	background-color:#e81b1b;
-}
-.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i, .social-network a.icoInstagram:hover i,
-.social-network a.icoYouTube:hover i {
-	color:#fff;
-}
-a.socialIcon:hover, .socialHoverClass {
-	color:#44BCDD;
-}
-
-.social-circle li a {
-	display:inline-block;
-	position:relative;
-	margin:0 auto 0 auto;
-	-moz-border-radius:50%;
-	-webkit-border-radius:50%;
-	border-radius:50%;
-	text-align:center;
-	width: 50px;
-	height: 50px;
-	font-size:20px;
-}
-.social-circle li i {
-	margin:0;
-	line-height:50px;
-	text-align: center;
-}
-
-.social-circle li a:hover i, .triggeredHover {
-	-moz-transform: rotate(360deg);
-	-webkit-transform: rotate(360deg);
-	-ms--transform: rotate(360deg);
-	transform: rotate(360deg);
-	-webkit-transition: all 0.2s;
-	-moz-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	-ms-transition: all 0.2s;
-	transition: all 0.2s;
-}
-.social-circle i {
-	color: #fff;
-	-webkit-transition: all 0.8s;
-	-moz-transition: all 0.8s;
-	-o-transition: all 0.8s;
-	-ms-transition: all 0.8s;
-
 
 	
 
