@@ -12,18 +12,19 @@ class AddPersonaTable extends Migration
      */
     public function up()
     {
-        //
+        //tabla persona
         Schema::create('persona', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('paterno');
-            $table->string('materno');
-            $table->date('nacimiento');
-            $table->string('rfc');
-            $table->string('curp');
-            $table->string('telcasa', 15);
-            $table->string('telmovil', 15);
-            $table->string('foto');
+            $table->string('nombre')->nullable();
+            $table->string('paterno')->nullable();
+            $table->string('materno')->nullable();
+            $table->date('nacimiento')->nullable();
+            $table->string('genero')->nullable();
+            $table->string('rfc')->nullable();
+            $table->string('curp')->nullable();
+            $table->string('telcasa')->nullable();
+            $table->string('telmovil')->nullable();
+            $table->string('image')->default('avatar.png');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->rememberToken();

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profesional extends Model
 {
-	protected $table = 'Profesional';
+	protected $table = 'profesional';
 
 	protected $fillable = ['nivel', 'especialidad', 'experiencia', 'persona_id'];
 

@@ -10,6 +10,7 @@ use App\User;
 use App\Persona;
 use App\Tipo;
 use App\Direccion;
+use App\Profesional;
 
 
 class UsersController extends Controller
@@ -40,6 +41,7 @@ class UsersController extends Controller
 
                 $user = new User($request->all());
                 $user->password = bcrypt($request->password);
+                $user->tipo_id = 3;
                 $user->save();
 
                 $persona = new Persona($request->all());
@@ -124,6 +126,12 @@ class UsersController extends Controller
         $direccion->persona_id = $persona->id;
 
         $direccion->save();
+
+        $profesional = new Profesional($request->all());
+
+        $profesional->persona_id = $persona->id;
+
+        $profesional->save();
 
         Session::flash('message-info', 'El usuario ha sido creado exitosamente!');
 

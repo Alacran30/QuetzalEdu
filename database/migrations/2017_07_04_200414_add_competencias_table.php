@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTipoTable extends Migration
+class AddCompetenciasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +13,10 @@ class AddTipoTable extends Migration
      */
     public function up()
     {
-        //tabla tipo
-          Schema::create('tipo', function (Blueprint $table) {
+        //tabla competencias
+        Schema::create('competencia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo');
+            $table->string('competencia');
         });
     }
 
@@ -26,6 +27,8 @@ class AddTipoTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tipo');
+        //
+        Schema::dropIfExists('competencia');
+
     }
 }

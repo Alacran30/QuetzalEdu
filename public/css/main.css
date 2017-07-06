@@ -1,5 +1,11 @@
 
 	/********** navbar-styles **********/
+
+	.panel-default:hover{
+		box-shadow: rgb(150,150,150) 3px 3px 10px;
+		border-radius: 5px;
+	}
+
 	body{
 		margin-top: 60px;
 		background-image: url('../img/figuras_fondo.png');

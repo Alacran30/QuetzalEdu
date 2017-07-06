@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
+use Cache;
 use Session;
 use Redirect;
 use App\Http\Requests;

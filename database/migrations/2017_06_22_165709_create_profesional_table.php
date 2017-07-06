@@ -13,11 +13,12 @@ class CreateProfesionalTable extends Migration
      */
     public function up()
     {
+        //tabla profesional
         Schema::create('profesional', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nivel');
-            $table->string('especialidad');
-            $table->string('experiencia');
+            $table->string('nivel')->nullable();
+            $table->string('especialidad')->nullable();
+            $table->string('experiencia')->nullable();
             $table->integer('persona_id')->unsigned();
             $table->foreign('persona_id')->references('id')->on('persona')->onDelete('cascade');
             $table->timestamps();

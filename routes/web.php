@@ -90,6 +90,13 @@ Route::resource('contraseña','PasswordController');
 
 Route::post('updatecontraseña','PasswordController@updatepassword');
 
+Route::resource('areas_conocimiento', 'AreaController');
+
+Route::get('area/{id}/destroy', [
+	'uses' => 'AreaController@destroy',
+		'as' => 'area.destroy'
+	]);
+
 
 Route::get('quienes_somos', function(){
     return view('index.quienes_somos');
