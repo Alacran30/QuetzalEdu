@@ -10,6 +10,8 @@
             <h3><span class="label label-warning">!Iniciar Sesión!</span></h3>
             </center>
             <hr>
+            
+
             @if(Session::has('message-error'))
               <div class="alert alert-danger alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -43,9 +45,15 @@
                 <button type="submit" class="btn btn-success btn-block"> INGRESAR</button>
               </div>
             {!!Form::close()!!}
+              <hr>
+              <div class="form-group">
+                <a class="btn btn-primary btn-block" href="{{ route('facebook.login') }}">
+              Login con facebook
+                </a>
+              </div>
           </div>
-          <div class="contra">
-            <p><span class="pull-left"> ¿No tienes <a href="{{ url('/registro') }}"> Cuenta?</a></span></p> ¿Olvidaste tu <a href="">Contraseña?</a>
+          <!-- <div class="contra">
+            <p><span class="pull-left"> ¿No tienes <a href="{{ url('/registro') }}"> Cuenta?</a></span></p> ¿Olvidaste tu <a href="">Contraseña?</a> -->
           </div>
         </div>
 @endsection

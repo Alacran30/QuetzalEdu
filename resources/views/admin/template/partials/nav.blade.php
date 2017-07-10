@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav">
         <li><a href="{{ route('users.index') }}"> <i class="fa fa-users"> &nbsp;USUARIOS</i> </a></li>
         <li><a href="{{ route('areas_conocimiento.index') }}"> <i class="fa fa-graduation-cap"> &nbsp;AREAS DE CONOCIMIENTO</i> </a></li>
-        <li><a href=""> <i class="fa fa-star"> &nbsp;COMPETENCIAS</i> </a></li>
+        <li><a href="{{ route('competencia.index')}}"> <i class="fa fa-star"> &nbsp;COMPETENCIAS</i> </a></li>
         <li><a href=""> <i class="fa fa-cubes"> &nbsp;CURSOS</i> </a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

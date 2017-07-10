@@ -92,6 +92,8 @@ Route::post('updatecontraseña','PasswordController@updatepassword');
 
 Route::resource('areas_conocimiento', 'AreaController');
 
+Route::resource('competencia', 'CompetenciaController');
+
 Route::get('area/{id}/destroy', [
 	'uses' => 'AreaController@destroy',
 		'as' => 'area.destroy'
@@ -101,5 +103,12 @@ Route::get('area/{id}/destroy', [
 Route::get('quienes_somos', function(){
     return view('index.quienes_somos');
 });
+
+
+//login
+
+Route::get('login/facebook', 'FacebookController@redirectToProvider')->name('facebook.login');
+Route::get('login/facebook/callback', 'FacebookController@handleProviderCallback');
+
 
 

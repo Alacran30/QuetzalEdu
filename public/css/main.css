@@ -3,7 +3,15 @@
 
 	.panel-default:hover{
 		box-shadow: rgb(150,150,150) 3px 3px 10px;
-		border-radius: 5px;
+		
+	}
+
+	.panel-heading:hover{
+		border-radius: 0px 0px 5px 5px;
+	}
+
+	.panel-heading{
+		border-radius: 0px 0px 5px 5px;
 	}
 
 	body{

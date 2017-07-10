@@ -10,7 +10,7 @@
         <div class="col-lg-3">
           <center>
           <img style="width: 235px; height: 235px;margin-right: 10px;margin-top: -10px;border: solid 5px #c1d188;" src='{{url('img/perfil/'.$user->persona->image)}}'>
-              <h5>Editar Perfil <span class="fa fa-edit"></span></h5>
+              <h5>Bienvenido, {{$user->username}}!</h5>
           <br>
           <img src="{{asset('img/logo_quetzal.png')}}">
           </center>
