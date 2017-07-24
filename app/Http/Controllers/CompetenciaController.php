@@ -4,32 +4,83 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Area;
+
+use App\Competencia;
+
 class CompetenciaController extends Controller
 {
-    //
+    
     public function index(Request $request){
 
-       return view('admin.competencias.index');
+    $competencia = Competencia::orderBy('id', 'DESC')->paginate(5);
+    $competencia->each(function($competencia){
+    $competencia->area;
+    });
+
+        return view('admin.competencias.index')->with('competencia', $competencia);
 
     }
 
 
     public function create(){
 
-    	return view('admin.areas.create');
+        $areas = Area::orderBy('id', 'ASC')->pluck('area_conocimiento', 'id');
+
+    	return view('admin.competencias.create')->with('areas', $areas);
     }
 
     
 
     public function store(Request $request){
 
-    	$area = new Area($request->all());
+        $competencia = new Competencia($request->all());
 
-        $area->save();
+        $competencia->area_id = 1; //ojo checar
 
-        flash('¡El Área '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido creada exitosamente!', 'success');
+        $nom = $competencia->area->area_conocimiento;
 
-        return redirect()->route('areas_conocimiento.index');
+        $comp = $competencia->titulo;
+        
+        if($request->file('video')) {
+
+        $file = $request->file('video');
+
+        $nombre = 'QuetzalEdu'. $file->getClientOriginalName();
+
+        $path = public_path() . '/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/';
+
+        $file->move($path, $nombre);
+
+        }
+
+        if($request->file('informacion')) {
+
+        $file = $request->file('informacion');
+
+        $nombre = 'QuetzalEdu'. $file->getClientOriginalName();
+
+        $path = public_path() . '/Contenidos/'.$nom.'/'.$comp.'/InformacionGeneral/';
+
+        $file->move($path, $nombre);
+
+        }
+
+        $files = $request->file('files');
+        foreach($files as $file){
+                $nombre = 'QuetzalEdu'. $file->getClientOriginalName();
+                $path = public_path() . '/Contenidos/'.$nom.'/'.$comp.'/ContenidoGeneral/';
+                $file->move($path, $nombre);
+            }
+
+        
+
+        $competencia->save();
+
+        flash('¡La Competencia Docente  '. '<strong>'.$competencia->titulo.'</strong>'. ' ha sido creada con exito!', 'success');
+
+        return redirect()->route('competencia.index');
+
     }
 
     public function show($id){
@@ -64,12 +115,12 @@ class CompetenciaController extends Controller
 
     public function destroy($id){
 
-        $area = Area::find($id);
-        $area->delete();
+        $competencia = Competencia::find($id);
+        $competencia->delete();
 
-        flash('¡El Área '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido eliminada de forma exitosa!', 'danger');
+        flash('¡La Competencia Docente '. '<strong>'.$competencia->titulo.'</strong>'. ' ha sido eliminada de forma exitosa!', 'danger');
 
-        return redirect()->route('areas_conocimiento.index');
+        return redirect()->route('competencia.index');
 
 
     }

@@ -10,8 +10,6 @@
             <h3><span class="label label-warning">!Iniciar Sesión!</span></h3>
             </center>
             <hr>
-            
-
             @if(Session::has('message-error'))
               <div class="alert alert-danger alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -41,19 +39,24 @@
               <div class="form-group">
                 <input type="checkbox" name="" checked><span>Recordar mi contraseña</span>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <button type="submit" class="btn btn-success btn-block"> INGRESAR</button>
-              </div>
-            {!!Form::close()!!}
-              <hr>
-              <div class="form-group">
-                <a class="btn btn-primary btn-block" href="{{ route('facebook.login') }}">
-              Login con facebook
+              </div> -->
+              <!--<hr>-->
+              <!-- <div class="form-group">
+              <div class="col-md-6">
+                <a class="btn btn-primary btn-block" href="{{ route('facebook.login') }}" style="background-color: #3b5998;">
+              Iniciar con &nbsp;<img src="img/facebook.png">
                 </a>
               </div>
+              </div> -->
+              <div class="form-group">
+                <input type="submit" name="" value="Iniciar Sesión" class="btn btn-success btn-block">
+              </div>
+              {!!Form::close()!!}
           </div>
-          <!-- <div class="contra">
-            <p><span class="pull-left"> ¿No tienes <a href="{{ url('/registro') }}"> Cuenta?</a></span></p> ¿Olvidaste tu <a href="">Contraseña?</a> -->
+          <div class="contra">
+            <p><span class="pull-left"> ¿No tienes <a href="{{ url('/registro') }}" style="text-decoration: underline;"> Cuenta?</a></span></p> ¿Olvidaste tu <a href="" style="text-decoration: underline;">Contraseña?</a>
           </div>
         </div>
 @endsection

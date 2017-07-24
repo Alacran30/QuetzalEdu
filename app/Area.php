@@ -11,4 +11,9 @@ class Area extends Model
 
 	protected $fillable = ['area_conocimiento'];
 
+	public function competencias(){
+
+    	return $this->hasMany('App\Competencia');
+    }
+
 }

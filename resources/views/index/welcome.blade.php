@@ -15,7 +15,7 @@
             </ol>
             <div class="item active">
               <center>
-                <img class="img-responsive" src="{{asset('img/slide1.png')}}">
+                <img class="img-responsive" src="{{asset('img/slide5.png')}}">
               </center> 
             </div>
             <div class="item">
@@ -35,7 +35,7 @@
             </div>
             <div class="item">
               <center>
-                <img class="img-responsive" src="{{asset('img/slide5.png')}}">
+                <img class="img-responsive" src="{{asset('img/slide1.png')}}">
               </center> 
             </div>
           </div>

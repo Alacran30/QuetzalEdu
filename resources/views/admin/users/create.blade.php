@@ -31,7 +31,7 @@ Inicio
 <div class="form-group">
   
   <label>Username:</label>
-  <input type="text" name="username" class="form-control">
+  <input type="text" name="username" class="form-control" required>
 
   <label>Correo Electrónico:</label>
   <input type="email" name="email" class="form-control">

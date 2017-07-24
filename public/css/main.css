@@ -267,6 +267,10 @@
 	}
 	/******** responsive ********/
 
+	.btn-success {
+    box-shadow: rgb(150,150,150) 3px 3px;
+}
+
 	
 
 

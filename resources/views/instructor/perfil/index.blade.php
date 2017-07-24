@@ -38,7 +38,7 @@ Perfil
 
 
 
-<hr>
+<br>
  <ul class="nav nav-tabs">
                   <li class="active"><a href="#info-tab" data-toggle="tab">DATOS PERSONALES <i class="fa"></i></a></li>
                   <li><a href="#adress-tab" data-toggle="tab">DIRECCIÓN <i class="fa"></i></a></li>

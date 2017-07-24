@@ -16,7 +16,14 @@ class AddCompetenciasTable extends Migration
         //tabla competencias
         Schema::create('competencia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('competencia');
+            $table->string('titulo');
+            $table->integer('area_id')->unsigned();
+            $table->foreign('area_id')->references('id')->on('area_conocimiento')->onDelete('cascade');
+            $table->string('descripcion');
+            $table->string('informacion');
+            $table->string('video');
+            $table->timestamps();
+
         });
     }
 

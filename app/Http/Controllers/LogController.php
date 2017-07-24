@@ -14,14 +14,6 @@ use App\Tipo;
 class LogController extends Controller{
 
 
-        public function index(){
-
-            return Redirect::to('/ingresar'); 
-
-        }
-
-
-
         public function login(Request $request){
 
            $this->validate($request, [

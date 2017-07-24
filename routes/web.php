@@ -11,14 +11,21 @@
 |
 */
 
+/*
+|--------------------------------------------------------------------------
+| SICIPAED, S. de R.L de C.V.
+|--------------------------------------------------------------------------
+|
+| Plataforma educativa para el desarrollo de competencias docentes
+| en la educación básica y media superior (etapa 1).
+|
+|
+*/
 
+// Rutas Front-End de Plataforma Educativa
 
 Route::get('/', function(){
     return view('index.welcome');
-});
-
-Route::get('contacto', function(){
-	return view('index.contacto');
 });
 
 Route::get('/registro', function(){
@@ -29,86 +36,71 @@ Route::get('/ingresar', function(){
 	return view('index.login');
 });
 
-Route::get('/instructores', function(){
-	return view('admin.users.index');
+Route::get('quienes_somos', function(){
+    return view('index.quienes_somos');
 });
 
+// Login con Facebook
 
+Route::get('/redirect', 'FacebookController@redirectToProvider')->name('facebook.login');
+
+Route::get('login/facebook/callback', 'FacebookController@handleProviderCallback');
+
+// Rutas Back-End de Plataforma Educativa
 
 Route::post('log',[
 	'as'=>'log',
 	'uses'=>'LogController@login']
 );
 
-Route::get('login', 'LogController@index');
-
 Route::get('logout', 'LogController@logout');
+
+Route::get('login', 'InicioController@inicio');
 
 Route::get('inicio',[
 	'as'=>'inicio',
 	'uses'=>'InicioController@index']
 );
 
-
-
-Route::resource('perfil','PerfilController');
-
-Route::post('perfil/updateImage', 'PerfilController@updateImage' );
-
-/* Route::Resource('perfil', 'PerfilController@index'); */
-
-
-/*Route::post('perfilUpdate', 'PerfilController@store');*/
-
-/* Route::get('perfilUpdate',[
-	'as'=>'perfilUpdate',
-	'uses'=>'PerfilController@store']
-); */
-
-
-
-
+// Rutas Administrador de Plataforma Educativa
 
 Route::resource('users','UsersController');
-
 
 Route::get('users/{id}/destroy', [
 	'uses' => 'UsersController@destroy',
 		'as' => 'users.destroy'
 	]);
 
-
 Route::post('agregar',[
 	'as'=>'agregar',
 	'uses'=>'UsersController@crear']
 );
 
-
-
-
-Route::resource('contraseña','PasswordController');
-
-Route::post('updatecontraseña','PasswordController@updatepassword');
-
 Route::resource('areas_conocimiento', 'AreaController');
-
-Route::resource('competencia', 'CompetenciaController');
 
 Route::get('area/{id}/destroy', [
 	'uses' => 'AreaController@destroy',
 		'as' => 'area.destroy'
 	]);
 
+Route::resource('competencia', 'CompetenciaController');
 
-Route::get('quienes_somos', function(){
-    return view('index.quienes_somos');
-});
+Route::get('competencia/{id}/destroy', [
+	'uses' => 'CompetenciaController@destroy',
+	'as' => 'competencia.destroy'
+	]);
+
+// Rutas Instructor de Plataforma Educativa
+
+Route::resource('perfil','PerfilController');
+
+Route::post('perfil/updateImage', 'PerfilController@updateImage' );
+
+Route::resource('contraseña','PasswordController');
+
+Route::post('updatecontraseña','PasswordController@updatepassword');
 
 
-//login
-
-Route::get('login/facebook', 'FacebookController@redirectToProvider')->name('facebook.login');
-Route::get('login/facebook/callback', 'FacebookController@handleProviderCallback');
 
 
 

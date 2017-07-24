@@ -35,4 +35,10 @@ class InicioController extends Controller
                 return view('alumno.inicio')->with('user', $user); 
             }
    	}
+
+    public function inicio(){
+
+            return Redirect::to('/ingresar');
+
+        }
 }

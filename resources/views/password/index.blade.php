@@ -32,7 +32,7 @@
         <label for="mypassword">Repetir Nueva Contraseña</label>
         <input type="password" name="password_confirmation" class="form-control" placeholder="Repite Nueva Contraseña">
        </div>
-       <a href="{{ url('administrador/perfil') }}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;Cancelar</a>
+       <a href="{{url('/inicio')}}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;Cancelar</a>
        <button type="submit" class="btn btn-success">Guardar Cambios</button>
        {!! Form::close() !!}
       <hr>
