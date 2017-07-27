@@ -2,7 +2,7 @@
 
 @section('title')
 
-Inicio
+Lista de Usuarios
 
 @endsection
 

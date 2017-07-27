@@ -3,6 +3,8 @@
 @section('title', 'Inicio')
 
 @section('section')
+
+    
     <br>
     <br>
     <div class="row">
@@ -41,15 +43,12 @@
         </div>
         <div class="col-lg-3">
         <center>
-          <h5 style="border: solid 5px #c1d188;padding: 5px;margin-right: 20px;color:#7fa57b;margin-top: -5px;">GESTIÓN DE GRUPOS</h5>
-          <h5 style="border: solid 5px #c1d188;background-color:#c1d188;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">ADMINISTRAR GRUPOS</h5>
-          <h5 style="border: solid 5px #c1d188;background-color:#c1d188;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">CREAR GRUPO</h5>
-          <h5 style="border: solid 5px #c1d188;background-color:#c1d188;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">UNIRSE A UN GRUPO</h5>
-          <h5 style="border: solid 5px #c1d188;padding: 5px;color:#7fa57b;margin-right: 20px;margin-top: -5px;">MIS GRUPOS</h5>
-          <h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">Competencias Docentes</h6>
-          <h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">Estrategias Docentes</h6>
-          <h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">Planeación y Desarrollo</h6>
-          <h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">Exámenes de Oposición</h6>
+          <h5 style="border: solid 5px #c1d188;background-color:#c1d188;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">ACTIVIDADES DEL CURSO</h5>
+          <h6 style="border: solid 5px #c1d188;padding: 5px;color:#7fa57b;margin-right: 20px;margin-top: -5px;">COMPETENCIAS DOCENTES</h6>
+          <h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">INTRODUCCIÓN</h6>
+          <a href="{{url('competencian')}}"><h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">COMPETENCIA 1</h6></a>
+          <h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">COMPETENCIA 2</h6>
+          <h6 style="border: solid 5px #7fa57b;background-color:#7fa57b;padding: 5px;margin-right: 20px;margin-top: -5px;color: #fff;">COMPETENCIA 3</h6>
           </center>
         </div>
       </div>

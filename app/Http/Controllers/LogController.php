@@ -29,7 +29,7 @@ class LogController extends Controller{
           
         else {
 
-        Session::flash('message-error', 'Estas credenciales no coinciden con nuestros registros');
+        Session::flash('message-error', 'Correo electrónico o contraseña incorrectos');
         return Redirect::to('/ingresar'); 
 
         }

@@ -2,7 +2,7 @@
 
 @section('title')
 
-Areas de Conocimiento
+Lista de Areas de Conocimiento
 
 @endsection
 

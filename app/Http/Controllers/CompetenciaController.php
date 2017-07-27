@@ -8,6 +8,8 @@ use App\Area;
 
 use App\Competencia;
 
+use App\User;
+
 class CompetenciaController extends Controller
 {
     
@@ -123,5 +125,23 @@ class CompetenciaController extends Controller
         return redirect()->route('competencia.index');
 
 
+    }
+
+    public function lista(){
+
+        $id = \Auth::user()->id;
+
+        $user = User::find($id);
+
+        return view('alumno.competencias')->with('user', $user);
+    }
+
+    public function competencian(){
+
+        $id = \Auth::user()->id;
+
+        $user = User::find($id);
+
+        return view('alumno.competencia')->with('user', $user);
     }
 }

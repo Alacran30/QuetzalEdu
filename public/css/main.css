@@ -269,7 +269,18 @@
 
 	.btn-success {
     box-shadow: rgb(150,150,150) 3px 3px;
-}
+	}
+
+	a:hover, a:focus {
+		text-decoration: none;
+	}
+
+	.aside{
+
+		text-align: left;
+	}
+
+	
 
 	
 

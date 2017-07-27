@@ -26,7 +26,7 @@ Perfil
         <button type="submit" name="imagen" class="btn btn-success"> Actualizar Imagen </button>
         <br>
     <br>
-    <img src="{{asset('img/logo_quetzal.png')}}">
+    <img src="{{asset('img/Q_Quetzal.png')}}">
     </center>
     </form>
   </div>

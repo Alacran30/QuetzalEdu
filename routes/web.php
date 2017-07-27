@@ -22,6 +22,8 @@
 |
 */
 
+
+
 // Rutas Front-End de Plataforma Educativa
 
 Route::get('/', function(){
@@ -99,6 +101,15 @@ Route::post('perfil/updateImage', 'PerfilController@updateImage' );
 Route::resource('contraseña','PasswordController');
 
 Route::post('updatecontraseña','PasswordController@updatepassword');
+
+// Rutas Alumno de Plataforma Educativa
+
+Route::get('competencias', 'CompetenciaController@lista');
+
+Route::get('competencian', 'CompetenciaController@competencian');
+
+
+
 
 
 
