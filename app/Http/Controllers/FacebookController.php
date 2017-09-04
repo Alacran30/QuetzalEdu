@@ -31,17 +31,20 @@ class FacebookController extends Controller
                 'email' => $facebook_user->getEmail(),
                 'password' => 1234567889,
                 'tipo_id' => 3,
-                
+
+                /*$user->password = bcrypt($request->password);*/
             ]);
 
-           dd('usuario creado');
+           /*	return Redirect::to('/inicio'); */     
 
-           
+           auth()->login($user);
 
-
-
-            
+           return Redirect::to('/inicio'); 
         }
+
+
+
+
         
         auth()->login($user); //selecciona la informacion del usuario 
        

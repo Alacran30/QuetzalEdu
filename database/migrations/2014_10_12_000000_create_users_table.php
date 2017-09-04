@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('tipo_id')->unsigned();
             $table->foreign('tipo_id')->references('id')->on('tipo');
+            $table->string('facebook_id');
             $table->rememberToken();
             $table->timestamps();
         });

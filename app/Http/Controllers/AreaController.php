@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Area;
 
+use App\Http\Requests\AreaRequest;
+
 class AreaController extends Controller
 {
     //
@@ -13,6 +15,8 @@ class AreaController extends Controller
 
 
        $area = Area::orderBy('id', 'ASC')->paginate(5);
+
+
 
        return view('admin.areas.index')->with('area', $area);
 
@@ -26,7 +30,7 @@ class AreaController extends Controller
 
     
 
-    public function store(Request $request){
+    public function store(AreaRequest $request){
 
     	$area = new Area($request->all());
 
@@ -50,7 +54,7 @@ class AreaController extends Controller
 
     }
 
-    public function update(Request $request, $id){
+    public function update(AreaRequest $request, $id){
 
 
         $area = Area::find($id);

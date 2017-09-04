@@ -2,7 +2,7 @@
 
 @section('title')
 
-Editar Area de Conocimiento
+Modificar Área de Conocimiento
 
 @endsection
 
@@ -14,10 +14,10 @@ Editar Area de Conocimiento
 
 <div class="row">
   <div class="col-md-12">
-    <h3>
-      <i class="fa fa-user-plus"></i>
-      Editar Area de Conocmiento
-    </h3>
+    <h4>
+      <i class="fa fa-pencil"></i>
+      Modificar Área de Conocimiento
+    </h4>
   </div>
 </div>
 

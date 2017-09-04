@@ -10,6 +10,8 @@ use App\Competencia;
 
 use App\User;
 
+use App\Http\Requests\CompetenciaRequest;
+
 class CompetenciaController extends Controller
 {
     
@@ -34,23 +36,28 @@ class CompetenciaController extends Controller
 
     
 
-    public function store(Request $request){
+    public function store(CompetenciaRequest $request){
 
         $competencia = new Competencia($request->all());
 
-        $competencia->area_id = 1; //ojo checar
+        $competencia->area_id = $competencia->area->id;
+
+        $competencia->user_id = 1;
 
         $nom = $competencia->area->area_conocimiento;
 
         $comp = $competencia->titulo;
+
         
         if($request->file('video')) {
 
         $file = $request->file('video');
 
-        $nombre = 'QuetzalEdu'. $file->getClientOriginalName();
+        $nombre = $file->getClientOriginalName();
 
-        $path = public_path() . '/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/';
+        $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/';
+
+        $pathvideo = public_path().'/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/'.$nombre;
 
         $file->move($path, $nombre);
 
@@ -60,26 +67,34 @@ class CompetenciaController extends Controller
 
         $file = $request->file('informacion');
 
-        $nombre = 'QuetzalEdu'. $file->getClientOriginalName();
+        $nombre = $file->getClientOriginalName();
 
-        $path = public_path() . '/Contenidos/'.$nom.'/'.$comp.'/InformacionGeneral/';
+        $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/InformacionGeneral/';
+
+        $pathinfo = public_path().'/Contenidos/'.$nom.'/'.$comp.'/InformacionGeneral/'.$nombre;
 
         $file->move($path, $nombre);
 
         }
 
+
+
         $files = $request->file('files');
         foreach($files as $file){
-                $nombre = 'QuetzalEdu'. $file->getClientOriginalName();
-                $path = public_path() . '/Contenidos/'.$nom.'/'.$comp.'/ContenidoGeneral/';
+                $nombre = 'QuetzalEdu'.$file->getClientOriginalName();
+                $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/ContenidoGeneral/';
                 $file->move($path, $nombre);
             }
 
-        
+
+
+        $competencia->informacion = $pathinfo;
+
+        $competencia->video = $pathvideo;
 
         $competencia->save();
 
-        flash('¡La Competencia Docente  '. '<strong>'.$competencia->titulo.'</strong>'. ' ha sido creada con exito!', 'success');
+        flash('¡La Competencia Docente '.'<strong>'.$competencia->titulo.'</strong>'. ' ha sido creada con exito!', 'success');
 
         return redirect()->route('competencia.index');
 

@@ -108,14 +108,18 @@
                 </div>
             </div>
           </div>
+          <div class="row" style="margin: 20px;" id="experiencias">
+            
+          </div>
           <!--/.modulos-->
         </div>
-        <div id="experiencias"></div>
+        
         <div class="exp">
           <center>
             <h4 style="color: #fff;">EXPERIENCIAS</h4>
           </center>
         </div>
+        
         <div class="container">
           <div class="col-md-6">
             <center>
@@ -162,25 +166,24 @@
         <footer>
           <div class="col-lg-12" style="background-color: #668933;">
               <div class="col-md-3" style="text-align: center;" >
-                <h4 style="color: #fff;">INICIO</h4>
-                <h6 style="color: #fff;">¿Quiénes somos?</h6>
+                <h4 style="color: #fff;">QuetzalEdu</h4>
                 <h6 style="color: #fff;">Cursos</h6>
+                <h6 style="color: #fff;">Articulos</h6>
                 <h6 style="color: #fff;">Experiencias</h6>
                 <h6 style="color: #fff;">Contácto</h6>
               </div>
               <div class="col-md-3" style="text-align: center;">
                 <h4 style="color: #fff;">CONTACTO</h4>
-                <h6 style="color: #fff;">correo@quetzaledu.com</h6>
-                <h6 style="color: #fff;">correo@gmail.com</h6>
-                <h6 style="color: #fff;">www.página.com</h6>
-                <h6 style="color: #fff;">5529324256</h6>
+                <h6 style="color: #fff;">contacto@quetzaledu.com</h6>
+                <h6 style="color: #fff;">www.quetzaledu.com.mx</h6>
+                <h6 style="color: #fff;">7712088011</h6>
               </div>
               <div class="col-md-3" style="text-align: center;">
                 <h4 style="color: #fff;">USUARIOS</h4>
-                <h6 style="color: #fff;">Docentes Participantes</h6>
-                <h6 style="color: #fff;">Docentes Capacitadores</h6>
-                <h6 style="color: #fff;">Noticias</h6>
-                <h6 style="color: #fff;">Blog</h6>
+                <h6 style="color: #fff;">Aviso de Privacidad</h6>
+                <h6 style="color: #fff;">Políticas de Uso</h6>
+                <h6 style="color: #fff;">Términos y Condiciones</h6>
+                <h6 style="color: #fff;">Protección de Datos</h6>
               </div>
               <div class="col-md-3 ">
                 <ul class="social-network social-circle"><br><br>
