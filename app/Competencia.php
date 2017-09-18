@@ -16,4 +16,14 @@ class Competencia extends Model
     	return $this->belongsTo('App\Area');
 
     }
+
+    public function actividades(){
+
+    	return $this->hasMany('App\Actividad');
+    }
+
+    public function contenidos(){
+
+    	return $this->hasMany('App\Mochila');
+    }
 }

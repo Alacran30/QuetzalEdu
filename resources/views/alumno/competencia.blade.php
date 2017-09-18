@@ -21,7 +21,7 @@
           <h3 style="margin-top: 0px;padding-top: 0px;">Organizar y Animar Situaciones de Aprendizaje</h3>
           <!-- <h4><a href="{{asset('Contenidos/Competencias Docentes/Organizar y Animar Situaciones de Aprendizaje/VideoGeneral/QuetzalEduCompetenciasM1.mp4')}}" style="color:#000;" target="_blank"><i class="fa fa-youtube"></i> Organizar y Animar Situaciones de Aprendizaje</a></h4> -->
           <hr>
-          <video autoplay class="img-responsive" src="{{asset('Contenidos/Competencias Docentes/Organizar y Animar Situaciones de Aprendizaje/VideoGeneral/QuetzalEduCompetenciasM1.mp4')}}" width="1280" height="720" controls>
+          <video autoplay class="img-responsive" src="{{asset('Contenidos/Competencias Docentes/Organizar y Animar Situaciones de Aprendizaje/VideoGeneral/CompetenciasM1.mp4')}}" width="1280" height="720" controls>
           </video>
           <hr>
         </div>

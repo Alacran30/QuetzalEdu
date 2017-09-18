@@ -35,11 +35,7 @@ class FacebookController extends Controller
                 /*$user->password = bcrypt($request->password);*/
             ]);
 
-           /*	return Redirect::to('/inicio'); */     
-
-           auth()->login($user);
-
-           return Redirect::to('/inicio'); 
+           dd('usuario creado'); 
         }
 
 

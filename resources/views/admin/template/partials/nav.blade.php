@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #162e21;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href=""><img src="{{asset('img/logotipo.png')}}" title="Plataforma de Capacitación Docente"></a>
+      <a class="navbar-brand" href=""><img src="{{asset('img/logotipo.png')}}" title="QuetzalEdu"></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,14 +17,19 @@
       </ul> -->
       <ul class="nav navbar-nav navbar-right">
 
-      <li><a href="{{ route('users.index') }}"> <i class="fa fa-users"> &nbsp;USUARIOS</i> </a></li>
+        
+
+      <!-- <li><a href="{{ route('users.index') }}"> <i class="fa fa-users"> &nbsp;USUARIOS</i> </a></li>
         <li><a href="{{ route('areas_conocimiento.index') }}"> <i class="fa fa-graduation-cap"> &nbsp;ÁREAS DE CONOCIMIENTO</i> </a></li>
-        <li><a href="{{ route('competencia.index')}}"> <i class="fa fa-star"> &nbsp;COMPETENCIAS</i> </a></li>
+        <li><a href="{{ route('competencia.index')}}"> <i class="fa fa-star"> &nbsp;COMPETENCIAS</i> </a></li> -->
+
+        <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('img/logotipo-SICIPAEDB.JPG')}}" title="SICIPAED"></a>
+       
 
         <!-- <li><a href="{{ url('/registro') }}"><span class="glyphicon glyphicon-user"></span> {!!Auth::user()->id_tipo !!} | &nbsp;{!!Auth::user()->username !!}</a></li> -->
         
             <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img src="{{asset('img/perfil/avatar.png')}}" width="23px;" class="img-circle"> &nbsp;{!!Auth::user()->username !!}  <span class="caret"></span></a>
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><!--<img src="{{asset('img/perfil/avatar.png')}}" width="23px;" class="img-circle"> -->{!!Auth::user()->username !!}  &nbsp;<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
 		            <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</a></li>
 		            <li><a href="#"><span class="glyphicon glyphicon-lock"></span> Cambiar Contraseña</a></li>

@@ -8,7 +8,7 @@
           <div>
           <center>
             <h3><span class="label label-danger">!Regístrese Ahora!</span></h3>
-            Ya tienes cuenta? <a href="{{url('/ingresar')}}" class="inicia"> Inicia Sesión</a>
+            ¿Ya tienes cuenta? <a href="{{url('/ingresar')}}" class="inicia"> Inicia Sesión</a>
           </center>
           @if(Session::has('message-error'))
             <div class="alert alert-danger alert-dismissible" role="alert">

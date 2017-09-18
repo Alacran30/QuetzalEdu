@@ -41,6 +41,9 @@
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-success btn-block"> INGRESAR</button>
+                 <div class="contra">
+            <p><span class="pull-left"> ¿No tienes <a href="{{ url('/registro') }}" style="text-decoration: underline;"> Cuenta?</a></span></p> ¿Olvidaste tu <a href="" style="text-decoration: underline;">Contraseña?</a>
+          </div>
               </div> 
               <hr>
               <div class="form-group">
@@ -50,12 +53,10 @@
               </div>
               <!-- <div class="form-group">
                 <input type="submit" name="" value="Iniciar Sesión" class="btn btn-success btn-block">
-              </div> 
+              </div> -->
               {!!Form::close()!!}
           </div>
-          <div class="contra">
-            <p><span class="pull-left"> ¿No tienes <a href="{{ url('/registro') }}" style="text-decoration: underline;"> Cuenta?</a></span></p> ¿Olvidaste tu <a href="" style="text-decoration: underline;">Contraseña?</a>
-          </div>
+         
         </div>
 @endsection
 

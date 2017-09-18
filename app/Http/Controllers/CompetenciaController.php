@@ -8,7 +8,11 @@ use App\Area;
 
 use App\Competencia;
 
+use App\Actividad;
+
 use App\User;
+
+use App\Mochila;
 
 use App\Http\Requests\CompetenciaRequest;
 
@@ -48,20 +52,6 @@ class CompetenciaController extends Controller
 
         $comp = $competencia->titulo;
 
-        
-        if($request->file('video')) {
-
-        $file = $request->file('video');
-
-        $nombre = $file->getClientOriginalName();
-
-        $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/';
-
-        $pathvideo = public_path().'/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/'.$nombre;
-
-        $file->move($path, $nombre);
-
-        }
 
         if($request->file('informacion')) {
 
@@ -77,15 +67,19 @@ class CompetenciaController extends Controller
 
         }
 
+        if($request->file('video')) {
 
+        $file = $request->file('video');
 
-        $files = $request->file('files');
-        foreach($files as $file){
-                $nombre = 'QuetzalEdu'.$file->getClientOriginalName();
-                $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/ContenidoGeneral/';
-                $file->move($path, $nombre);
-            }
+        $nombre = $file->getClientOriginalName();
 
+        $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/';
+
+        $pathvideo = public_path().'/Contenidos/'.$nom.'/'.$comp.'/VideoGeneral/'.$nombre;
+
+        $file->move($path, $nombre);
+
+        }
 
 
         $competencia->informacion = $pathinfo;
@@ -93,6 +87,39 @@ class CompetenciaController extends Controller
         $competencia->video = $pathvideo;
 
         $competencia->save();
+
+        $files = $request->file('actividades');
+        foreach($files as $file){
+                $nombre = $file->getClientOriginalName();
+                $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/Actividades/';
+                $pathactividad = public_path().'/Contenidos/'.$nom.'/'.$comp.'/Actividades/'.$nombre;
+                $file->move($path, $nombre);
+
+                $actividad = new Actividad($request->all());
+
+                $actividad->competencia_id = $competencia->id;
+
+                $actividad->actividad = $pathactividad;
+
+                $actividad->save(); 
+            }
+
+
+        $files = $request->file('mochila');
+        foreach($files as $file){
+                $nombre = $file->getClientOriginalName();
+                $path = public_path().'/Contenidos/'.$nom.'/'.$comp.'/Mochila/';
+                $pathmochila = public_path().'/Contenidos/'.$nom.'/'.$comp.'/Mochila/'.$nombre;
+                $file->move($path, $nombre);
+
+                $mochila = new Mochila($request->all());
+
+                $mochila->competencia_id = $competencia->id;
+
+                $mochila->mochila = $pathmochila;
+
+                $mochila->save(); 
+            }
 
         flash('¡La Competencia Docente '.'<strong>'.$competencia->titulo.'</strong>'. ' ha sido creada con exito!', 'success');
 

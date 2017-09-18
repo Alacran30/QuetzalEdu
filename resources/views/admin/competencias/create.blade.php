@@ -35,6 +35,8 @@ Agregar Competencia Docente
 		<div class="panel-body">
 {!! Form::open(['route' => 'competencia.store', 'method' => 'POST', 'files' => 'true']) !!}
 
+{{ csrf_field() }}
+
 <div class="form-group">
 	{!! Form::label('titulo', 'Titulo de Competencia') !!}
 	{!! Form::text('titulo',null, ['class' => 'form-control', 'placeholder' => 'Titulo de Competencia', 
@@ -62,8 +64,13 @@ Agregar Competencia Docente
 </div>
 
 <div class="form-group">
-	<i class="fa fa-folder-open"></i> {!! Form::label('contenidos', 'Contenidos del Curso') !!} 
-	<input id="files" multiple="" name="files[]" type="file" class="file-loading" required>
+	<i class="fa fa-file-pdf-o"></i> {!! Form::label('contenidos', 'Actividades del Curso') !!} 
+	<input id="actividades" multiple="" name="actividades[]" type="file" class="file-loading" required>
+</div>
+
+<div class="form-group">
+  <i class="fa fa-suitcase"></i> {!! Form::label('mochila', 'Mochila del Curso') !!} 
+  <input id="mochila" multiple="" name="mochila[]" type="file" class="file-loading" required>
 </div>
 
 <div class="form-group">

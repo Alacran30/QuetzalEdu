@@ -38,7 +38,13 @@
 			
 			});
 
-   $("#files").fileinput({
+   $("#actividades").fileinput({
+
+	showUpload: false,
+			
+			});
+
+    $("#mochila").fileinput({
 
 	showUpload: false,
 			

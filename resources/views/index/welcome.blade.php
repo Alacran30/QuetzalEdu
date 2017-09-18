@@ -48,7 +48,7 @@
           <div class="col-lg-12">
             <h3>
               <center>
-                ¿En qué desea capacitarse?
+                <img src="{{asset('img/NuestrosCursos.png')}}">
                 <hr>
               </center>
             </h3>
@@ -56,54 +56,46 @@
         <!--modulos-->
           <div class="row" style="text-align: center;">
             <div class="col-md-3">
-                <div class="panel panel-default" style="background-color: #7fa57b;border-radius: 10px;">
-                    <div class="panel-body">
+                <div class="panel panel-default" style="background-color: #fff;border-radius: 10px;">
                     <center>
-                        <img class="img-responsive" src="{{asset('img/competencias_docentes.png')}}">
+                        <img class="img-responsive" src="{{asset('img/C1P.jpg')}}" width="263" style="border-radius: 10px 10px 0px 0px;">
                     </center>
-                    </div>
                     <div class="panel-heading">
                         <h5> Competencias Docentes</h5>
-                        <a href="" class="btn btn-default"> Ver Curso </a>
+                        <a href="" class="btn btn-default" style="background-color: #638742;color: #fff;"> Ver Curso </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="panel panel-default" style="background-color: #c1d188;border-radius: 10px;">
-                    <div class="panel-body">
+                <div class="panel panel-default" style="background-color: #fff;border-radius: 10px;">
                     <center>
-                        <img class="img-responsive" src="{{asset('img/estrategias_docentes.png')}}">
+                        <img class="img-responsive" src="{{asset('img/C2P.jpg')}}" width="263" style="border-radius: 10px 10px 0px 0px;">
                     </center>
-                    </div>
                     <div class="panel-heading">
                         <h5> Estrategias Docentes</h5>
-                        <a href="" class="btn btn-default"> Ver Curso </a>
+                        <a href="" class="btn btn-default" style="background-color: #ebbf65;color: #fff;"> Ver Curso </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="panel panel-default" style="background-color: #7fa57b;border-radius: 10px;">
-                    <div class="panel-body">
+                <div class="panel panel-default" style="background-color: #fff;border-radius: 10px;">
                     <center>
-                        <img class="img-responsive" src="{{asset('img/desarrollo_planeacion.png')}}">
+                        <img class="img-responsive" src="{{asset('img/C3P.jpg')}}" width="263" style="border-radius: 10px 10px 0px 0px;">
                     </center>
-                    </div>
                     <div class="panel-heading">
                         <h5> Desarrollo y Planeación</h5>
-                        <a href="" class="btn btn-default"> Ver Curso </a>
+                        <a href="" class="btn btn-default" style="background-color: #bfcf83;color: #fff;"> Ver Curso </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="panel panel-default" style="background-color: #c1d188;border-radius: 10px;">
-                    <div class="panel-body">
+                <div class="panel panel-default" style="background-color: #fff;border-radius: 10px;">
                     <center>
-                        <img class="img-responsive" src="{{asset('img/capacitacion_examenes.png')}}">
+                        <img class="img-responsive" src="{{asset('img/C4P.jpg')}}" width="263" style="border-radius: 10px 10px 0px 0px;">
                     </center>
-                    </div>
                     <div class="panel-heading">
                         <h5> Exámenes de Oposición</h5>
-                        <a href="" class="btn btn-default"> Ver Curso </a>
+                        <a href="" class="btn btn-default" style="background-color: #92CBD5;color: #fff;"> Ver Curso </a>
                     </div>
                 </div>
             </div>
@@ -186,12 +178,14 @@
                 <h6 style="color: #fff;">Protección de Datos</h6>
               </div>
               <div class="col-md-3 ">
+                <center>
                 <ul class="social-network social-circle"><br><br>
                 <li><a href="#" class="icoYouTube" title="YouTube"><i class="fa fa-youtube"></i></a></li>
                 <li><a href="#" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                 </ul>
+                </center>
               </div>
           </div>
         </footer>
