@@ -15,6 +15,7 @@
 <body>
 	@include('admin.template.partials.nav')
 	@yield('section')
+	@include('flash::message')
 	<script src="{{asset('jquery-3.1.1/jquery-3.1.1.min.js')}}"></script>
 	<script src="{{asset('bootstrap-3.3.7/js/bootstrap.min.js')}}"></script>
 	<script src="{{asset('js/fileinput.min.js')}}"></script>

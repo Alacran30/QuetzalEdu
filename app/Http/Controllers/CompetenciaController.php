@@ -20,7 +20,6 @@ class CompetenciaController extends Controller
 {
     
     public function index(Request $request){
-
     $competencia = Competencia::orderBy('id', 'DESC')->paginate(5);
     $competencia->each(function($competencia){
     $competencia->area;
@@ -32,9 +31,7 @@ class CompetenciaController extends Controller
 
 
     public function create(){
-
         $areas = Area::orderBy('id', 'ASC')->pluck('area_conocimiento', 'id');
-
     	return view('admin.competencias.create')->with('areas', $areas);
     }
 
@@ -121,7 +118,7 @@ class CompetenciaController extends Controller
                 $mochila->save(); 
             }
 
-        flash('¡La Competencia Docente '.'<strong>'.$competencia->titulo.'</strong>'. ' ha sido creada con exito!', 'success');
+        flash('¡El curso '.'<strong>'.$competencia->titulo.'</strong>'. ' ha sido creado con exito!', 'success');
 
         return redirect()->route('competencia.index');
 
@@ -162,7 +159,7 @@ class CompetenciaController extends Controller
         $competencia = Competencia::find($id);
         $competencia->delete();
 
-        flash('¡La Competencia Docente '. '<strong>'.$competencia->titulo.'</strong>'. ' ha sido eliminada de forma exitosa!', 'danger');
+        flash('¡El curso '. '<strong>'.$competencia->titulo.'</strong>'. ' ha sido eliminado de forma exitosa!', 'danger');
 
         return redirect()->route('competencia.index');
 

@@ -30,7 +30,14 @@ class PasswordController extends Controller{
 
         $user = User::find($id);
 
-       return view('password.index')->with('user', $user);
+        if(\Auth::user()->tipo_id==1){
+        return view('admin.password.index')->with('user', $user);
+        }
+        else{
+        return view('password.index')->with('user', $user);
+        }
+
+       
 
     }
 

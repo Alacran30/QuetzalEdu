@@ -87,6 +87,7 @@ class UsersController extends Controller
         $user->persona->materno = $request->materno;
 
         $user->save();
+        $user->persona->save();
 
         flash('El Usuario '. '<strong>'.$user->nombre.'</strong>'. ' ha sido editado exitosamente', 'warning');
 
@@ -100,7 +101,7 @@ class UsersController extends Controller
         
          $user->delete();
 
-         flash('El Usuario '. '<strong>'.$user->nombre.'</strong>'. ' ha sido eliminado de forma exitosa', 'danger');
+         flash('El Usuario '. '<strong>'.$user->username.'</strong>'. ' ha sido eliminado de forma exitosa', 'danger');
 
          return redirect()->route('users.index');
     }

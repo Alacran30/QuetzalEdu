@@ -92,6 +92,10 @@ Route::get('competencia/{id}/destroy', [
 	'as' => 'competencia.destroy'
 	]);
 
+Route::get('/pagos', function(){
+    return view('admin.pagos.index');
+});
+
 // Rutas Instructor de Plataforma Educativa
 
 Route::resource('perfil','PerfilController');
@@ -113,5 +117,36 @@ Route::get('competencian', 'CompetenciaController@competencian');
 
 
 
+Route::get('/CursoCompetenciasDocentes', function(){
+	return view('index.CursoCompetenciasDocentes');
+});
 
+Route::get('/CursoEstrategiasDocentes', function(){
+	return view('index.CursoEstrategiasDocentes');
+});
 
+Route::get('/CursoDesarrolloPlaneacion', function(){
+	return view('index.CursoDesarrolloPlaneacion');
+});
+
+Route::get('/CursoExamenesOposicion', function(){
+	return view('index.CursoExamenesOposicion');
+});
+
+Route::get('Aviso', function(){
+	return view('index.Terminos.Aviso');
+});
+
+Route::get('Politicas', function(){
+	return view('index.Terminos.Politicas');
+});
+
+Route::get('Proteccion', function(){
+	return view('index.Terminos.Proteccion');
+});
+
+Route::get('Terminos', function(){
+	return view('index.Terminos.Terminos');
+});
+
+Route::resource('mail','MailController');

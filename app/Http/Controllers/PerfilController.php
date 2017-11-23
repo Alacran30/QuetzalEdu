@@ -33,7 +33,12 @@ class PerfilController extends Controller
 
         $user->persona->profesional;
 
+        if(\Auth::user()->tipo_id==1){
+        return view('admin.perfil.index')->with('user', $user);
+        }
+        else{
      	return view('instructor.perfil.index')->with('user', $user);
+        }
      
    	}
 
@@ -87,32 +92,44 @@ class PerfilController extends Controller
 
         $user->save();
 
+        flash()->overlay('<h6>'.'Su Perfil fue modificado correctamente &nbsp;'.'<span class="fa fa-check">'.'<span>'.'</h6>', 'Actualizar Perfil');
+
+        if(\Auth::user()->tipo_id==1){
+        return redirect()->route('perfil.index')->with('user', $user);
+        }
+        else{
         return view('instructor.inicio')->with('user', $user);
+        }
+
+        
 
    	}
 
     public function updateImage(Request $request){
 
+        $this->validate($request, [
+           'imagen' => 'required | image',
+        ]);
 
         $id = \Auth::user()->id;
 
         $user = User::find($id);
 
-        $id_persona = $user->persona->id;
+        /*$id_persona = $user->persona->id;
 
-        $persona = Persona::find($id_persona);
+        $persona = Persona::find($id_persona);*/
 
-        $file = $request->file('image');
+        $file = $request->file('imagen');
 
-        $nombre = 'quetzaledu_'.$file->getClientOriginalName();
+        $nombre = $file->getClientOriginalName();
 
         $path = public_path().'/img/perfil';
 
         $file->move($path, $nombre);
 
-        $persona->image = $nombre;
+        $user->photo = $nombre;
 
-        $persona->save();
+        $user->save();
 
         return redirect()->route('perfil.index')->with('user', $user);
 

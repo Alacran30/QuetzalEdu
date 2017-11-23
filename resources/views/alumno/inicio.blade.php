@@ -9,8 +9,8 @@
       <div class="col-lg-12">
         <div class="col-lg-3">
           <center>
-          <img style="width: 235px; height: 235px;margin-right: 10px;margin-top: -10px;border: solid 5px #c1d188;" src='{{url('img/perfil/'.$user->persona->image)}}'>
-              <h5>Bienvenido, {{$user->username}}!</h5>
+          <img style="width: 235px; height: 235px;margin-right: 10px;margin-top: -10px;border: solid 5px #c1d188;" >
+              <h5>Bienvenido, </h5>
           <br>
           <img src="{{asset('img/Q_Quetzal.png')}}">
           </center>

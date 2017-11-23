@@ -10,11 +10,17 @@ use App\Http\Requests\AreaRequest;
 
 class AreaController extends Controller
 {
+
+    function __construct(){
+
+        $this->middleware('auth', ['only' => ['index']]);
+    }
+    
     //
      public function index(Request $request){
 
 
-       $area = Area::orderBy('id', 'ASC')->paginate(5);
+       $area = Area::orderBy('id', 'ASC')->paginate(4);
 
 
 
@@ -36,7 +42,7 @@ class AreaController extends Controller
 
         $area->save();
 
-        flash('¡El Área '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido creada exitosamente!', 'success');
+        flash('¡El área de conocimiento '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido creada exitosamente!', 'success');
 
         return redirect()->route('areas_conocimiento.index');
     }
@@ -61,7 +67,7 @@ class AreaController extends Controller
         $area->area_conocimiento = $request->area_conocimiento;
         $area->save();
 
-        flash('¡El Área  '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido editada con exito!', 'warning');
+        flash('¡El área de conocimiento  '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido editada con exito!', 'warning');
 
         return redirect()->route('areas_conocimiento.index');
 
@@ -76,7 +82,7 @@ class AreaController extends Controller
         $area = Area::find($id);
         $area->delete();
 
-        flash('¡El Área '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido eliminada de forma exitosa!', 'danger');
+        flash('¡El área de conocimiento '. '<strong>'.$area->area_conocimiento.'</strong>'. ' ha sido eliminada de forma exitosa!', 'danger');
 
         return redirect()->route('areas_conocimiento.index');
 

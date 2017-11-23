@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Persona;
+use App\Profesional;
+use App\Direccion;
 use Illuminate\Http\Request;
 use Socialite; 
 use Auth;
@@ -35,7 +38,25 @@ class FacebookController extends Controller
                 /*$user->password = bcrypt($request->password);*/
             ]);
 
-           dd('usuario creado'); 
+            $user = User::where('facebook_id',$facebook_user->getId())->first();
+
+            $persona = new Persona();
+            $persona->user_id = $user->id;
+            $persona->save();
+
+            $profesional = new Profesional();
+            $profesional->persona_id = $persona->id;
+            $profesional->save();
+
+            $direccion = new Direccion();
+            $direccion->persona_id = $persona->id;
+            $direccion->save();
+
+
+            auth()->login($user); //selecciona la informacion del usuario 
+            flash()->overlay('Mensaje de Bienvenida al Sistema');
+            return Redirect::to('/inicio'); 
+           
         }
 
 

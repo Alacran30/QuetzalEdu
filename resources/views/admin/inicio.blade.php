@@ -88,7 +88,8 @@ body {
 
 #sidebar-wrapper .sidebar-nav li {
     text-indent: 0;
-    line-height: 45px;
+    line-height: 55px;
+    /*ojo*/
 }
 
 #sidebar-wrapper .sidebar-nav li a {
@@ -266,6 +267,12 @@ p.padding {
 	font-size: 1em;
 }
 
+.opc{
+
+    font-size: 16px;
+    color: #000;
+}
+
 
 
 </style>
@@ -295,6 +302,7 @@ $("#mytable #checkall").click(function () {
 
 
 <div class="col-md-12">
+
   <div class="col-md-3">
     <body>
                             <!--<li class="dropdown">
@@ -311,55 +319,58 @@ $("#mytable #checkall").click(function () {
         <div id="sidebar-wrapper" >
             <aside id="sidebar" >
                 <ul id="sidemenu" class="sidebar-nav">
-                <li style="margin-top: 15px;margin-bottom: 0px;">
-                        <a href="#">
-                            <span class="sidebar-title"> <strong> <i class="fa fa-circle" style="color: #5cb85c;"></i> &nbsp;Administrador</strong> </span>
-                        </a>
+                    <li style="margin-top: 15px;margin-bottom: 0px;color: #fff;">
+                        <span class="sidebar-title"><strong><i class="fa fa-circle" style="color: #5cb85c;"></i> &nbsp;Administrador</strong></span>
                     </li>
-                <li>
-                        <a href="#">
-                            <a id="user-profile" href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{asset('img/avatar2.png')}}" class="img-circle" style="border: solid 2px;"> &nbsp;<strong>{!!Auth::user()->username !!} </strong></a><br>
-                        </a>
+                    <li style="margin-bottom: 25px;">
+                        <span id="user-profile" href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;"><img src='{{url('img/perfil/'.Auth::user()->photo)}}' class="img-circle" style="border: solid 2px;" width=70px;> &nbsp;<strong>{!!Auth::user()->username !!}</strong></span><br>
                     </li>
-                  <!--<li>
-                    </li>-->
                     <li> 
                             <a href="{{url('/Escritorio')}}">
                             <span class="sidebar-icon"><img class="padding" class="img-responsive" src="{{asset('img/AdminSide1.png')}}"></a></span>
-                            <a href="{{url('/Escritorio')}}" class="aside"><font color="#94c160">Escritorio</font>
+                            <a href="{{url('/inicio')}}" class="aside"><font color="#94c160">Escritorio</font>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('/AreasDelConocimiento')}}">
+                        <a href="{{url('/areas_conocimiento')}}">
                             <span class="sidebar-icon"><img class="padding" class="img-responsive" src="{{asset('img/AdminSide2.png')}}"></a></span>
-                            <a href="{{url('/AreasDelConocimiento')}}" class="aside"><span class="sidebar-title">Áreas del Conocimiento</span>
+                            <a href="{{url('/areas_conocimiento')}}" class="aside"><span class="sidebar-title">Áreas de conocimiento</span>
                         </a>
                         <ul id="submenu-3" class="panel-collapse collapse panel-switch" role="menu">
                         </ul>
                     </li>
+
                     <li>
-                        <a class="accordion-toggle collapsed toggle-switch aside" data-toggle="collapse" href="#submenu-2">
-                            <span class="sidebar-icon"><img class="padding" class="img-responsive" src="{{asset('img/AdminSide3.png')}}"></span>
-                            <span class="sidebar-title">Crear Cursos</span>
-                            <b class="caret"></b>
-                        </a> 
-                        <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu" >
-                            <li ><a href="{{url('/1CD')}}" class="aside"><i class="fa fa-circle-thin"></i>Competencias Docentes</a></li>
-                            <li><a href="{{url('/2ED')}}" class="aside"><i class="fa fa-circle-thin"></i>Estrategias Docentes</a></li>
-                            <li><a href="{{url('/3PD')}}" class="aside"><i class="fa fa-circle-thin"></i>Planeación Docente</a></li>
-                            <li><a href="{{url('/4EO')}}" class="aside"><i class="fa fa-circle-thin"></i>Exámenes de Oposición</a></li>
+                        <a href="{{url('/areas_conocimiento')}}">
+                            <span class="sidebar-icon"><img class="padding" class="img-responsive" src="{{asset('img/AdminSide3.png')}}"></a></span>
+                            <a href="{{route('competencia.index')}}" class="aside"><span class="sidebar-title">Gestion de cursos</span>
+                        </a>
+                        <ul id="submenu-3" class="panel-collapse collapse panel-switch" role="menu">
                         </ul>
                     </li>
+                    <!-- <li>
+                        <a class="accordion-toggle collapsed toggle-switch aside" data-toggle="collapse" href="#submenu-2">
+                            <span class="sidebar-icon"><img class="padding" class="img-responsive" src="{{asset('img/AdminSide3.png')}}"></span>
+                            <span class="sidebar-title">Crear cursos</span>
+                            <b class="caret"></b>
+                        </a> 
+                        <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
+                            <li ><a href="{{url('/1CD')}}" class="aside"><i class="fa fa-circle"></i>Competencias Docentes</a></li>
+                            <li><a href="{{url('/2ED')}}" class="aside"><i class="fa fa-circle"></i>Estrategias Docentes</a></li>
+                            <li><a href="{{url('/3PD')}}" class="aside"><i class="fa fa-circle"></i>Planeación Docente</a></li>
+                            <li><a href="{{url('/4EO')}}" class="aside"><i class="fa fa-circle"></i>Exámenes de Oposición</a></li>
+                        </ul>
+                    </li> -->
                     <li>
-                        <a href="{{url('/GestionUsuarios')}}">
+                        <a href="{{url('/users')}}">
                             <span class="sidebar-icon"><img class="padding" class="img-responsive" src="{{asset('img/AdminSide4.png')}}"></a></span>
-                            <a href="{{url('/GestionUsuarios')}}" class="aside"><span class="sidebar-title">Gestión de Usuarios</span>
+                            <a href="{{url('/users')}}" class="aside"><span class="sidebar-title">Gestión de usuarios</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{url('/ControlPagos')}}"> 
                             <span class="sidebar-icon"><img class="padding" class="img-responsive" src="{{asset('img/AdminSide5.png')}}"></a></span>
-                            <a href="{{url('/ControlPagos')}}" class="aside"><span class="sidebar-title">Control de pagos</span>
+                            <a href="{{url('/pagos')}}" class="aside"><span class="sidebar-title">Control de pagos</span>
                         </a>
                     </li>
                 </ul>
@@ -407,44 +418,76 @@ educación básica y media superior.</h4>
                 
                 </div>
                 <div class="col-lg-9">
-                <h5>Bienvenido Omar Martínez</h5>
+                <h5>¡Bienvenido <strong>{!!Auth::user()->username !!}!</strong></h5>
                 <h5>Plataforma educativa para el desarrollo de competencias docentes en la 
-educación básica y media superior.</h5>
+educación básica y media superior (etapa 1).</h5><br>
                 </div>
                 <img class="img-responsive" src="{{asset('img/cintaAdmin2.png')}}"><br>
 
 
                  <div class="col-lg-10 col-lg-offset-1">
-                 <h5>Usted a ingresado como administrador del sistema</h5>
-                 <h5 class="text-justify">Como administrador usted podrá realizar la administración de usuarios, áreas del conocimiento, subir materiales de los cursos de cada área, así como gestionar el control de pagos de sus clientes y usuarios.</h5>
-                 <h5 class="text-justify">Para obtener mas información le recomendamos revisar el manual de usuario dando clic en la parte superior derecha de su pantalla.</h5>
+                 <h5><strong>Usted a ingresado como administrador del sistema.</strong></h5>
+                 <h5 class="text-justify">Como administrador usted podrá gestionar la administración de usuarios, áreas de conocimiento, subir materiales de los cursos de cada área, así como gestionar el control de pagos de sus clientes.</h5>
+                 <h5 class="text-justify">Para obtener mas información le recomendamos revisar el manual de usuario dando clic en la parte superior derecha de su pantalla.</h5><br>
                   </div>
 
-                  <div class="col-lg-2 col-lg-offset-2">
+                  <!-- <div class="col-lg-2">
                   <center>
                 <a href="{{url('/AreasDelConocimiento')}}"><img class="img-responsive" src="{{asset('img/AdminE1.jpg')}}"></a><br>
-                <h5><a href="{{url('/AreasDelConocimiento')}}">Áreas de conocimiento</a></h5>
+                <h5><a href="{{url('/AreasDelConocimiento')}}" class="btn btn-success">Áreas de conocimiento</a></h5>
                 
                     </center>
-                  </div> 
-                  <div class="col-lg-2">
+                  </div>  -->
+
+
+                 <!--  <div class="col-lg-2">
                   <center>
                 <a href="{{url('/1CD')}}"><img class="img-responsive" src="{{asset('img/AdminE2.jpg')}}"></a><br>
-                <h5><a href="{{url('/1CD')}}">Gestión de Cursos</a></h5>
+                <h5><a href="{{url('/1CD')}}" class="btn btn-success" >Gestión de Cursos</a></h5>
                     </center>
+                  </div> -->
+
+                  <div class="col-lg-2">
                   </div>
+
                   <div class="col-lg-2">
                   <center>
-                <a href="{{url('/GestionUsuarios')}}"><img class="img-responsive" src="{{asset('img/AdminE3.jpg')}}"></a><br>
-                <h5><a href="{{url('/GestionUsuarios')}}">Gestión de Usuarios</a></h5>
+                <a href="{{url('/areas_conocimiento')}}"><img class="img-responsive" src="{{asset('img/areas.jpg')}}" style="border-radius: 5px;"></a><br>
+                <h5 class="opc"> Áreas de conocimiento </h5>
                     </center>
                   </div>
+
                   <div class="col-lg-2">
                   <center>
-                <a href="{{url('/ControlPagos')}}"><img class="img-responsive" src="{{asset('img/AdminE4.jpg')}}"></a><br>
-                <h5><a href="{{url('/ControlPagos')}}">Control de Pagos</a></h5>
+                <a href="{{url('/competencia')}}"><img class="img-responsive" src="{{asset('img/cursos.jpg')}}" style="border-radius: 5px;"></a><br>
+                <h5 class="opc"> Gestión de cursos</h5>
                     </center>
-                  </div><br>
+                  </div>
+
+                  <div class="col-lg-2">
+                  <center>
+                <a href="{{url('/users')}}"><img class="img-responsive" src="{{asset('img/usuarios.jpg')}}" style="border-radius: 5px;"></a><br>
+                <h5 class="opc"> Gestión de usuarios </h5>
+                    </center>
+                  </div>
+
+
+                  <div class="col-lg-2">
+                  <center>
+                <a href="{{url('/pagos')}}"><img class="img-responsive" src="{{asset('img/dinero.png')}}" style="border-radius: 5px;"></a><br>
+                <h5 class="opc"> Control de pagos </h5>
+                    </center>
+                  </div>
+
+                  <div class="col-lg-2">
+                  </div>
+
+
+
+
+                 
+
+
 
                   <div class="col-lg-2 col-lg-offset-2">
                   <center>
@@ -466,9 +509,7 @@ educación básica y media superior.</h5>
                   </div>
 
                 
-                  <!--<div class="col-lg-5">
-                    <img class="img-responsive" src="{{asset('img/YC.png')}}" style="width: 80px; height: 62px;">
-                  </div>-->
+            
 </div>
 </div>
 </div>

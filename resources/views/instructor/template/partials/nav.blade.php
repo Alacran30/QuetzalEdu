@@ -19,7 +19,7 @@
             <li><a href="#"> <i class="fa fa-bell fa-2x" style="margin-top: -5px;"></i> <i class="label label-danger">10</i></a></li>
             <li><a href="#"> {!!Auth::user()->username !!} </a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img style="width: 45px; height: 45px;float: left;margin-right: 10px;margin-top: -10px;border: solid 2px #c1d188" src='{{url('img/perfil/'.$user->persona->image)}}'><span class="caret" style="color: #c1d188;"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <img style="width: 45px; height: 45px;float: left;margin-right: 10px;margin-top: -10px;border: solid 2px #c1d188" ><span class="caret" style="color: #c1d188;"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{url('/perfil')}}"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</a></li>
                 <li><a href="{{url('/contraseña')}}"><span class="glyphicon glyphicon-lock"></span> Cambiar Contraseña</a></li>

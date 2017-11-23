@@ -14,7 +14,7 @@ class InicioController extends Controller
 {
     function __construct(){
 
-        $this->middleware('auth', ['only' => ['index']]);
+        //$this->middleware('auth', ['only' => ['index']]);
     }
 
     public function index(){ 
